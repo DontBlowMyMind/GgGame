@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
-public class CharacterBARS : MonoBehaviour
+public class CharacterBARS : NetworkBehaviour
 {
     public Image hpbar;
     public Image mpbar;

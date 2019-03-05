@@ -23,6 +23,10 @@ public class CharacterController : NetworkBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
         movement.PlayerMove();
         animation.Animate();
         bar.BarDraw();

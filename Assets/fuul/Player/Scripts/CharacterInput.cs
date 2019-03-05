@@ -40,7 +40,7 @@ public class CharacterInput : NetworkBehaviour
 
         if (Input.GetKeyDown(KeyCode.V))
         {
-            Spawn.StartWawe();
+            //Spawn.StartWawe();
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))

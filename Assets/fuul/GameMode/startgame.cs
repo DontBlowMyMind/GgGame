@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class start : NetworkBehaviour
+public class startgame : NetworkBehaviour
 {
-    public CamerScript cam;
-    public GameObject player;
-    
+    public SpawnEnemies Spawn;
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
+
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-    
+        Debug.Log(Spawn.isWaweEnd);
+        if (Spawn.isWaweEnd)
+            Spawn.StartWawe();
+
     }
 }

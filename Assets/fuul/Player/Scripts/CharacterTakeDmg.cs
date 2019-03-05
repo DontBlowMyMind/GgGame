@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Networking;
 
-public class CharacterTakeDmg : MonoBehaviour
+public class CharacterTakeDmg : NetworkBehaviour
 {
     public PropertyAi pa;
     public PlayerProperty Player;

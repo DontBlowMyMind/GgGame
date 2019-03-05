@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class CharacteAnimations : MonoBehaviour
+public class CharacteAnimations : NetworkBehaviour
 {
     public PlayerProperty characterProperty;
     public CharacterMovement characterMovement;

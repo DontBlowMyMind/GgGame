@@ -15,7 +15,7 @@ public class SpawnEnemies : MonoBehaviour
 
     public PlayerProperty player;
 
-    public bool isWaweEnd;
+    public bool isWaweEnd = true;
     public float spawnTime = 1.5f;
     public int maxWaveCount = 5;
     public int currentWawe = 0;
@@ -34,6 +34,7 @@ public class SpawnEnemies : MonoBehaviour
     public void StartWawe()
     {
         isWaweEnd = false;
+        Debug.Log("Start");
         if (maxWaveCount != currentWawe)
         {
             foreach(var spawn in SpawnPoints)
