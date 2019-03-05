@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Networking;
 
-public class CharacterMovement : MonoBehaviour
+public class CharacterMovement : NetworkBehaviour
 {
     public string suck;
     public Vector3 target;
     public NavMeshAgent nav;
     public PlayerProperty PlayerProperty;
     public float spid;
-
     public float rotationSpeed = 5f;
     public float stopDistance = 1.5f;
 
