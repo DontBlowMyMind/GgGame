@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-
-public class move : NetworkBehaviour
+public class Controller : NetworkBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
         if (isLocalPlayer)
         {
-            this.GetComponentInChildren<Camera>().enabled = true;
+            Debug.Log("Local");
+            this.transform.GetChild(0).GetComponent<Camera>().enabled = true;
         }
         else
         {
-            this.GetComponentInChildren<Camera>().enabled = false;
+            Debug.Log("Not");
+            this.transform.GetChild(0).GetComponent<Camera>().enabled = false;
         }
     }
 
@@ -25,8 +26,8 @@ public class move : NetworkBehaviour
         {
             return;
         }
-        var x = Input.GetAxis("Horizontal")*0.1f;
-        var z = Input.GetAxis("Vertical")*0.1f;
+        var x = Input.GetAxis("Horizontal") * 0.1f;
+        var z = Input.GetAxis("Vertical") * 0.1f;
         transform.Translate(x, 0, z);
     }
 }
