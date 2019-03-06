@@ -4,18 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 
+
 public class CharacterBARS : NetworkBehaviour
 {
-    public Image hpbar;
-    public Image mpbar;
-    public Text str;
-    public Text intel;
-    public Text agil;
-
+   [SerializeField] public Image hpbar;
+    [SerializeField] public Image mpbar;
+    [SerializeField] public Text str;
+    [SerializeField] public Text intel;
+    [SerializeField] public Text agil;
+    
     public PlayerProperty characterProperty;
     // Update is called once per frame
+   
     public void BarDraw()
     {
+        
         str.text = characterProperty.strength.ToString();
         intel.text = characterProperty.intelege.ToString();
         agil.text = characterProperty.agility.ToString();
@@ -26,5 +29,10 @@ public class CharacterBARS : NetworkBehaviour
         {
             characterProperty.isDead = true;
         }
+    }
+    public override void OnStartLocalPlayer()
+    {
+        GetComponent<PlayerProperty>();
+        base.OnStartLocalPlayer();
     }
 }

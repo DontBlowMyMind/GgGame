@@ -22,6 +22,19 @@ public class Damage : MonoBehaviour
     {
         Enemys.Remove(other.gameObject);
     }
+    private void Update()
+    {
+        int sdvig = 0;
+        for(int i = 0; i < Enemys.Count; i++)
+        {
+            if (Enemys[i - sdvig] == null)
+            {
+                Enemys.RemoveAt(i - sdvig);
+                sdvig++;
+            }
+        }
+    }
+
     public void FindAngleAndSetAttack()
     {
         foreach (var other in Enemys)

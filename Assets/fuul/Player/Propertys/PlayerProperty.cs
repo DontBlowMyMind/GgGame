@@ -1,27 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class PlayerProperty : MonoBehaviour
+public class PlayerProperty : NetworkBehaviour
 {
-    public bool isDead;
-    public bool isUseSkill;
-    public bool isRunning;
-    public bool isSprinting;
 
-    public float characterSpeed;
+    [SerializeField] public bool isDead;
+    [SerializeField] public bool isUseSkill;
+    [SerializeField] public bool isRunning;
+    [SerializeField] public bool isSprinting;
 
-    public float characterSprintingBost;
-    public float baseSpeed;
-    public float maxSpeed;
-    public float minSpeed;
+    [SerializeField] public float characterSpeed;
 
-    public float characterHP;
-    public float characterMP;
+    [SerializeField] public float characterSprintingBost;
+    [SerializeField] public float baseSpeed;
+    [SerializeField] public float maxSpeed;
+    [SerializeField] public float minSpeed;
+   
+    [SerializeField] public float characterHP;
+   
+    [SerializeField] public float characterMP;
+    
+    [SerializeField] public float damage;
+  
+    [SerializeField] public float agility;
+    
+    [SerializeField] public float strength;
 
-    public float damage;
-    public float agility;
-    public float strength;
-    public float intelege;
+    [SerializeField] public float intelege;
 
 }

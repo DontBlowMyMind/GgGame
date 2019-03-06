@@ -20,16 +20,14 @@ public class CharacterController : NetworkBehaviour
         movement = GetComponent<CharacterMovement>();
     }
 
-    // Update is called once per frame
+   
     void FixedUpdate()
     {
-        if (!isLocalPlayer)
-        {
-            return;
-        }
-        movement.PlayerMove();
-        animation.Animate();
-        bar.BarDraw();
+            movement.PlayerMove();
+            animation.Animate();
+            bar.BarDraw();     
     }
-   
+  
+
+
 }

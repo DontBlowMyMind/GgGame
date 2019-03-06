@@ -1,29 +1,52 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class uron : MonoBehaviour
+public class uron : NetworkBehaviour
 {
-   // public Animator anim;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private bool isattak;
+    public Damage damage;
+
+
+    private void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if(!isLocalPlayer)
         {
-           
-            gameObject.GetComponent<Animator>().SetTrigger("attack");
+          /*  if (Input.GetKeyDown(KeyCode.Mouse1)) 
+            {
+                isattak = true;
+                    if (isattak == true)
+                {
+                    damage.FindAngleAndSetAttack();
+                    gameObject.GetComponent<Animator>().SetTrigger("attack");
+                }
+                
+            }
+            if (Input.GetKeyUp(KeyCode.Mouse1))
+            {
+                isattak = false;
+                if (isattak == false)
+                {
+                    foreach(var nu in damage.Enemys)
+                    {
+                        if (nu == null)
+                        {
+                            damage.Enemys.Clear();
+                        }
+                    }
+                    gameObject.GetComponent<Animator>().SetTrigger("idle");
+                }
+                
+            }*/
         }
-        if (Input.GetKeyUp(KeyCode.Mouse1))
-        {
-            
-            gameObject.GetComponent<Animator>().SetTrigger("idle");
-        }
+       
+    }
+    public override void OnStartLocalPlayer()
+    {
+        GetComponent<GameObject>();
+        base.OnStartLocalPlayer();
     }
 
 }

@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class CamerScript : MonoBehaviour
+public class CamerScript : NetworkBehaviour
 {
     public Transform target;
     public Vector3 offset;
@@ -15,6 +16,14 @@ public class CamerScript : MonoBehaviour
 
     public float currentZoom = 5f;
     public float currentYaw = 0f;
+
+    [Client]
+    private void Start()
+    {
+        
+        Debug.Log("Attach camera");
+        target = this.transform.root;
+    }
 
     void Update()
     {

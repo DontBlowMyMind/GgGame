@@ -8,14 +8,12 @@ public class AiTakeDamage : MonoBehaviour
     public PropertyAi pa;
     public PlayerProperty player;
     public Image hpbar;
-    public GameObject rag;
+    
     // Start is called before the first frame update
     void Start()
     {
         pa.hp = 1f;
-       
     }
-
     // Update is called once per frame
     void OnTriggerEnter(Collider other)
     {

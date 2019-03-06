@@ -16,13 +16,13 @@ public class selecthero : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("asd");
+       /* Debug.Log("asd");
         if (other.tag == "Player")
         {
 
-            maincam.target = heroprefab.transform;
+           // maincam.nt = heroprefab.transform;
             Destroy(current);
-        }
+        }*/
     }
 
 }

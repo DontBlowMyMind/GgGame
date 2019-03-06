@@ -6,35 +6,25 @@ using UnityEngine.Networking;
 
 public class CharacterTakeDmg : NetworkBehaviour
 {
-    public PropertyAi pa;
     public PlayerProperty Player;
-
-    public CamerScript maincam;
-    public GameObject heroprefab;
-    public GameObject current;
     // Start is called before the first frame update
     void Start()
     {
-      
+        Player = GetComponent<PlayerProperty>();
     }
     // Update is called once per frame
-   
-        void OnTriggerEnter(Collider other)
-        {
-        
+
+    void OnTriggerEnter(Collider other)
+    {
+
         if (other.tag == "damage")
-            {
-                Debug.Log("asdd");
-                Player.characterHP -= pa.damage;
-            /* maincam.target = heroprefab.transform;
-                Destroy(current);*/
-            }
-        
+        {
+            GameObject parent = other.transform.root.gameObject;
+            Debug.Log(parent.name);
+            PropertyAi pa = parent.GetComponent<PropertyAi>();
+            Player.characterHP -= pa.damage;
         }
-   
 
-
-
-
+    }
 
 }
