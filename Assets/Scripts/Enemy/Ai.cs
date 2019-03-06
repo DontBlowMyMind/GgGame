@@ -8,7 +8,6 @@ using System.Linq;
 public class Ai : NetworkBehaviour
 {
     public float dist;
-
     NavMeshAgent nav;
     public float AgrRadius = 20f;
     public float atdist = 2f;
@@ -64,7 +63,7 @@ public class Ai : NetworkBehaviour
 
     void Update()
     {
-        if (target != null)
+        if(target !=null)
         {
             if (target.GetComponent<PlayerController>().IsDead)
             {
@@ -81,5 +80,4 @@ public class Ai : NetworkBehaviour
         Move();
     }
 }
-
 
