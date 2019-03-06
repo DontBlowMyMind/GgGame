@@ -16,6 +16,9 @@ public class PlayerController : NetworkBehaviour
     [SyncVar]
     public float HP = 100;
 
+    [SyncVar]
+    private bool isDead = false;
+
     void Start()
     {
         nav = GetComponent<NavMeshAgent>();
@@ -38,10 +41,16 @@ public class PlayerController : NetworkBehaviour
             Move();
     }
 
+    public bool IsDead
+    {
+        get { return isDead; }
+    }
+
     private bool CheckHP()
     {
         if(HP <= 0)
         {
+            isDead = true;
             return false;
         }
         return true;

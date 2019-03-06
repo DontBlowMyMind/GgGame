@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine;
 
-public class Damage :  MonoBehaviour
+public class DamageDialer :  MonoBehaviour
 {
     public float damage;
 
@@ -11,7 +11,8 @@ public class Damage :  MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            other.GetComponent<PlayerController>().TakeDamage(damage);
+            if(!other.GetComponent<PlayerController>().IsDead)
+                other.GetComponent<PlayerController>().TakeDamage(damage);
         }
     }
 }

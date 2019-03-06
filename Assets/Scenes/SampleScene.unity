@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -112,6 +112,68 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: dccbfa53e4eb7884bb256eeb0c56f833, type: 2}
+--- !u!1001 &152355620
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 776394203, guid: 57765ed217e1aca42a26d73d47800098, type: 3}
+      propertyPath: m_Name
+      value: warrok_w_kurniawan
+      objectReference: {fileID: 0}
+    - target: {fileID: 776394205, guid: 57765ed217e1aca42a26d73d47800098, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.6825495
+      objectReference: {fileID: 0}
+    - target: {fileID: 776394205, guid: 57765ed217e1aca42a26d73d47800098, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.2569282e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 776394205, guid: 57765ed217e1aca42a26d73d47800098, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.9171499
+      objectReference: {fileID: 0}
+    - target: {fileID: 776394205, guid: 57765ed217e1aca42a26d73d47800098, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 776394205, guid: 57765ed217e1aca42a26d73d47800098, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 776394205, guid: 57765ed217e1aca42a26d73d47800098, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 776394205, guid: 57765ed217e1aca42a26d73d47800098, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 776394205, guid: 57765ed217e1aca42a26d73d47800098, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 776394205, guid: 57765ed217e1aca42a26d73d47800098, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 776394205, guid: 57765ed217e1aca42a26d73d47800098, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 776394205, guid: 57765ed217e1aca42a26d73d47800098, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016994803930649282, guid: 57765ed217e1aca42a26d73d47800098,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 57765ed217e1aca42a26d73d47800098, type: 3}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +333,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &878178633
 GameObject:
@@ -402,7 +464,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &904307525
 GameObject:
@@ -493,5 +555,24 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2145257965 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7928160971047498002, guid: 57765ed217e1aca42a26d73d47800098,
+    type: 3}
+  m_PrefabInstance: {fileID: 152355620}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2145257969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145257965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8800c26670ca3242a6e09bfc4b3566e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
