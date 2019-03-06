@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/fuul.unity
     guid: fd597343a7a65ad49905c3142a50f3e3
+  - enabled: 0
+    path: Assets/fuul/New.unity
+    guid: 85431a2eb8b178041919687de03136ef
   m_configObjects: {}
