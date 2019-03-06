@@ -11,6 +11,7 @@ public class ISLOCAL : NetworkBehaviour
         if (isLocalPlayer)
         {
             GetComponent<CharacterController>().enabled = true;
+            GetComponent<CamerScript>().enabled = true;
         }
     }
 
